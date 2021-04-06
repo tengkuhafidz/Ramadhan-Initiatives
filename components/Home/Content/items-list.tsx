@@ -4,11 +4,20 @@ import Card from './item-types/card'
 
 interface Props {
 	items: Item[]
+	favouriteIds: number[]
+	toggleFavourite: (id: number) => void
 }
 
-export default function ItemsList({items}: Props) {
+export default function ItemsList({items, favouriteIds, toggleFavourite}: Props) {
 	const renderItems = () => {
-		return items.map(item => <Card item={item} key={item.id} />)
+		return items.map(item => (
+			<Card
+				item={item}
+				key={item.id}
+				favouriteIds={favouriteIds}
+				toggleFavourite={toggleFavourite}
+			/>
+		))
 	}
 
 	return (

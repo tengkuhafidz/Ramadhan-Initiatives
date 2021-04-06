@@ -2,10 +2,15 @@ import {Item} from '../../../../utils/constants'
 
 interface Props {
 	item: Item
+	favouriteIds: number[]
+	toggleFavourite: (id: number) => void
 }
 
-export default function Card({item}: Props) {
-	const {title, organisation, posterUrl, type, initiativeUrl} = item
+export default function Card({item, favouriteIds, toggleFavourite}: Props) {
+	const {id, title, organisation, posterUrl, type, initiativeUrl} = item
+
+	const isFavourite = favouriteIds.includes(id)
+
 	return (
 		<div className="shadow-lg rounded-xl">
 			<img
@@ -19,13 +24,14 @@ export default function Card({item}: Props) {
 						<div className="flex-grow">
 							<span className="text-green-600">{type.toUpperCase()}</span>
 						</div>
-						<div className="">
+						<div>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								className="h-5 w-5 cursor-pointer text-green-600"
+								className="h-5 w-5 cursor-pointer text-green-600 transform hover:scale-125"
 								viewBox="0 0 20 20"
-								fill="none"
+								fill={isFavourite ? 'currentColor' : 'none'}
 								stroke="currentColor"
+								onClick={() => toggleFavourite(id)}
 							>
 								<path
 									fillRule="evenodd"
