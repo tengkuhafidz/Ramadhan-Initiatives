@@ -57,13 +57,13 @@ export default function FilterSection({
 				[Clear Filter]
 			</p>
 			<FilterOptions
-				title="Graduated From"
+				title="Type"
 				options={allTypes}
 				selectedFilter={selectedType}
 				setSelectedFilter={setSelectedTypeAndResetSelectedTag}
 			/>
 			<FilterOptions
-				title="Field"
+				title="Tag"
 				options={distinctFields}
 				selectedFilter={selectedTag}
 				setSelectedFilter={setSelectedTag}

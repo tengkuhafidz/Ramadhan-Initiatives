@@ -1,6 +1,6 @@
 export enum InitiativeType {
-	Donation = "Donation",
-	Participation = "Participation"
+	Donation = 'Donation',
+	Participation = 'Participation',
 }
 
 export interface Item {
@@ -51,7 +51,8 @@ export const defaultSiteData: SiteData = {
 	footerLinkableUrl: 'https://websheets.pro',
 	//SEO
 	seoTitle: 'Ramadhan Initiatives',
-	seoDescription: 'List of good initiatives for us to participate in and contribute to this Ramadhan',
+	seoDescription:
+		'List of good initiatives for us to participate in and contribute to this Ramadhan',
 	seoBannerUrl: '/images/banner.png',
 }
 

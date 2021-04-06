@@ -16,7 +16,7 @@ export default function Card({item, favouriteIds, toggleFavourite}: Props) {
 			<img
 				src={posterUrl}
 				alt="initiative poster"
-				className="object-cover h-56 w-full rounded-t-xl"
+				className="object-cover h-48 w-full rounded-t-xl"
 			/>
 			<div className="py-4 px-3">
 				<figcaption className="font-medium">

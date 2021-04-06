@@ -8,7 +8,11 @@ interface Props {
 	toggleFavourite: (id: number) => void
 }
 
-export default function ItemsList({items, favouriteIds, toggleFavourite}: Props) {
+export default function ItemsList({
+	items,
+	favouriteIds,
+	toggleFavourite,
+}: Props) {
 	const renderItems = () => {
 		return items.map(item => (
 			<Card
@@ -21,8 +25,6 @@ export default function ItemsList({items, favouriteIds, toggleFavourite}: Props)
 	}
 
 	return (
-		<div className="py-16 mb-8 grid gap-x-4 md:grid-cols-3">
-			{renderItems()}
-		</div>
+		<div className="py-16 mb-8 grid gap-12 md:grid-cols-3">{renderItems()}</div>
 	)
 }
