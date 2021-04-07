@@ -10,10 +10,13 @@ export default function NoResults({
 	selectedTypeFilter,
 	selectedTagsFilter,
 }: Props) {
-	const searchTermFilter = !searchTerm ? (
-		<span>initiatives</span>
+	const searchTermFilterMessage = !searchTerm ? (
+		<></>
 	) : (
-		<span className="font-light underline">"{searchTerm}"</span>
+		<span>
+			{' '}
+			for <span className="font-light underline">"{searchTerm}"</span>
+		</span>
 	)
 
 	const typeFilterMessage =
@@ -40,7 +43,7 @@ export default function NoResults({
 	return (
 		<div className="max-w-2xl bg-gray-100 px-2 mt-8 mb-12 py-6 rounded-xl mx-auto text-center">
 			<p className="text-gray-500 font-semibold">
-				No results found for {searchTermFilter}
+				No initiatives found {searchTermFilterMessage}
 				{typeFilterMessage}
 				{fieldFilterMessage}.
 			</p>

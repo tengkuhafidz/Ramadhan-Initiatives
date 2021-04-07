@@ -35,7 +35,7 @@ export default function Searchbar({
 		<div className="relative">
 			<input
 				type="text"
-				className="shadow py-2 px-4 w-full text-gray-500 rounded-full border border-gray-200 outline-none focus:shadow-lg"
+				className="shadow py-2 px-4 w-full text-gray-500 rounded-xl border border-gray-200 outline-none focus:shadow-lg"
 				placeholder="Search"
 				value={searchTerm}
 				onChange={e => setSearchTermAndResetFieldFitler(e.target.value)}

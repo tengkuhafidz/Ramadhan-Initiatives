@@ -1,6 +1,8 @@
 export enum InitiativeType {
-	Donation = 'Donation',
-	Participation = 'Participation',
+	Favourite = '💖 My Favourites',
+	Donation = '🎁 Donation',
+	Participation = '✊ Participation',
+	Resource = '🗂️ Resource',
 }
 
 export interface Item {
@@ -43,16 +45,16 @@ export const defaultSiteData: SiteData = {
 	navMenuText: '',
 	navMenuUrl: '',
 	//HERO
-	heroTitle: '',
-	heroDescription: '',
+	heroTitle: 'Ramadhan Initiative',
+	heroDescription:
+		"We all want to maximise our good deeds during Ramadhan. Here's a list of initiatives that might be able to help us attain that insyaallah.",
 	//FOOTER
 	footerText: 'This is an initiative is by',
 	footerLinkableText: 'Websheets',
 	footerLinkableUrl: 'https://websheets.pro',
 	//SEO
 	seoTitle: 'Ramadhan Initiatives',
-	seoDescription:
-		'List of good initiatives for us to participate in and contribute to this Ramadhan',
+	seoDescription: 'List of good initiatives for us to look into this Ramadhan',
 	seoBannerUrl: '/images/banner.png',
 }
 

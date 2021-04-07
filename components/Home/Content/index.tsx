@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {ALL, Item} from '../../../utils/constants'
+import {filterItems} from '../../../utils/filter'
 import {getFuseSearchResult} from '../../../utils/search'
 import FilterSection from './FilterSection'
 import ItemsList from './items-list'
@@ -31,15 +32,15 @@ export default function Content({items}: Props) {
 		setFavouriteIds(updatedItemsList)
 	}
 
-
 	const searchResults = searchTerm
 		? getFuseSearchResult(items, searchTerm)
 		: items
 
-	const filteredItems = searchResults.filter(
-		item =>
-			(selectedTypeFilter === ALL || item.type === selectedTypeFilter) &&
-			(selectedTagsFilter === ALL || item.tags.includes(selectedTagsFilter)),
+	const filteredItems = filterItems(
+		searchResults,
+		selectedTypeFilter,
+		selectedTagsFilter,
+		favouriteIds,
 	)
 
 	const renderItemsList = () => {
