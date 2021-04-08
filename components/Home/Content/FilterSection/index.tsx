@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from 'react'
 import { Item } from '../../../../utils/constants'
+import { filterByType } from '../../../../utils/filter'
 import AdvancedFilter from './advanced-filter'
 import MainFilter from './main-filter'
 
@@ -9,6 +10,7 @@ interface Props {
 	setSelectedTag: Dispatch<SetStateAction<string>>
 	selectedType: string
 	setSelectedType: Dispatch<SetStateAction<string>>
+	favouriteIds: number[]
 }
 
 export default function FilterSection({
@@ -17,7 +19,11 @@ export default function FilterSection({
 	setSelectedTag,
 	selectedType,
 	setSelectedType,
+	favouriteIds
 }: Props) {
+
+	const itemsByType = filterByType(items, selectedType, favouriteIds)
+
 	return (
 		<div>
 			<MainFilter
@@ -26,7 +32,7 @@ export default function FilterSection({
 				setSelectedTag={setSelectedTag}
 			/>
 			<AdvancedFilter
-				items={items}
+				items={itemsByType}
 				selectedTag={selectedTag}
 				setSelectedTag={setSelectedTag}
 			/>

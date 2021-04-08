@@ -1,6 +1,6 @@
-import {Dispatch, SetStateAction, useState} from 'react'
-import {ALL, InitiativeType, Item} from '../../../../utils/constants'
-import {getDistinctFields} from '../../../../utils/filter'
+import { Dispatch, SetStateAction, useState } from 'react'
+import { ALL, Item } from '../../../../utils/constants'
+import { getDistinctFields } from '../../../../utils/filter'
 import FilterOptions from './filter-options'
 
 interface Props {

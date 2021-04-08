@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {ALL, Item} from '../../../utils/constants'
 import {filterItems} from '../../../utils/filter'
 import {getFuseSearchResult} from '../../../utils/search'
@@ -17,6 +17,15 @@ export default function Content({items}: Props) {
 	const [selectedTagsFilter, selectedTagsFiltersFilter] = useState(ALL)
 	const [favouriteIds, setFavouriteIds] = useState([])
 
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const initialFavouriteIds = localStorage.getItem('favouriteIds')
+				? JSON.parse(localStorage.getItem('favouriteIds'))
+				: []
+			setFavouriteIds(initialFavouriteIds)
+		}
+	}, [])
+
 	const removeIdFromFavs = (id: number) =>
 		favouriteIds.filter(favId => favId !== id)
 	const addIdToFavs = (id: number) => [id, ...favouriteIds]
@@ -29,6 +38,7 @@ export default function Content({items}: Props) {
 			updatedItemsList = addIdToFavs(id)
 		}
 
+		localStorage.setItem('favouriteIds', JSON.stringify(updatedItemsList))
 		setFavouriteIds(updatedItemsList)
 	}
 
@@ -71,11 +81,12 @@ export default function Content({items}: Props) {
 					selectedTagsFiltersFilter={selectedTagsFiltersFilter}
 				/>
 				<FilterSection
-					items={filteredItems}
+					items={searchResults}
 					selectedTag={selectedTagsFilter}
 					setSelectedTag={selectedTagsFiltersFilter}
 					selectedType={selectedTypeFilter}
 					setSelectedType={selectedTagFilter}
+					favouriteIds={favouriteIds}
 				/>
 			</div>
 			{renderItemsList()}

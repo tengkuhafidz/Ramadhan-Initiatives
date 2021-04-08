@@ -8,7 +8,6 @@ interface Props {
 
 export default function Card({item, favouriteIds, toggleFavourite}: Props) {
 	const {id, title, organisation, posterUrl, type, initiativeUrl} = item
-
 	const isFavourite = favouriteIds.includes(id)
 
 	return (
