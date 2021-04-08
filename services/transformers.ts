@@ -33,7 +33,7 @@ export const transformSiteData = (siteDataValue: any[]): SiteData => ({
 	footerLinkableText: siteDataValue[11],
 	footerLinkableUrl: siteDataValue[12],
 	//SEO
-	seoTitle: siteDataValue[13] || defaultSiteData.seoTitle,
-	seoDescription: siteDataValue[14] || defaultSiteData.seoDescription,
-	seoBannerUrl: siteDataValue[15] || defaultSiteData.seoBannerUrl,
+	seoTitle: siteDataValue[14] || defaultSiteData.seoTitle,
+	seoDescription: siteDataValue[15] || defaultSiteData.seoDescription,
+	seoBannerUrl: siteDataValue[16] || defaultSiteData.seoBannerUrl,
 })

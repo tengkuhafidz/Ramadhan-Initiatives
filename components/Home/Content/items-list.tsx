@@ -25,6 +25,8 @@ export default function ItemsList({
 	}
 
 	return (
-		<div className="py-16 mb-8 grid gap-12 md:grid-cols-3">{renderItems()}</div>
+		<div className="py-16 mb-8 grid gap-6 xl:gap-12 md:grid-cols-3">
+			{renderItems()}
+		</div>
 	)
 }
