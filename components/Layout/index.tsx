@@ -1,3 +1,4 @@
+import BackToTop from './back-to-top'
 import SEO from './seo'
 
 export default function Layout({children}) {
@@ -5,6 +6,7 @@ export default function Layout({children}) {
 		<div className="text-gray-900 dark:bg-gray-800 dark:text-gray-100">
 			<SEO />
 			<main className="flex-grow">{children}</main>
+			<BackToTop />
 		</div>
 	)
 }
