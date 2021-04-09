@@ -7,6 +7,7 @@ const fetchSheetsData = async (
 	cellRange: string,
 	majorDimension: SheetsDimension,
 ) => {
+	console.log(`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${tabName}!${cellRange}?majorDimension=${majorDimension}&key=${SHEET_KEY}`)
 	return await axios.get(
 		`https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/${tabName}!${cellRange}?majorDimension=${majorDimension}&key=${SHEET_KEY}`,
 	)
@@ -21,8 +22,9 @@ export const getItems = async () => {
 export const getSiteData = async () => {
 	const {data} = await fetchSheetsData(
 		'site',
-		'B1:B18',
+		'B1:B21',
 		SheetsDimension.COLUMNS,
 	)
+	console.log(data)
 	return transformSiteData(data.values[0])
 }

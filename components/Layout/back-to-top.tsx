@@ -21,11 +21,10 @@ const BackToTop = () => {
 	const scrollToTop = (): void => {
 		window.scrollTo(0, 0)
 	}
-
 	return (
 		<div
 			onClick={scrollToTop}
-			className={`transition-opacity fixed bottom-0 right-0 z-50 p-4 md:py-8 md:px-24 duration-500 ${
+			className={`transition-opacity fixed bottom-0 right-0 z-50 p-4 md:py-8 xl:px-24 duration-500 ${
 				visible ? 'opacity-50 hover:opacity-100 cursor-pointer' : 'opacity-0'
 			}`}
 		>

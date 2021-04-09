@@ -4,8 +4,8 @@ module.exports = {
 			{
 				source: '/edit',
 				destination:
-					'https://docs.google.com/spreadsheets/d/1jEN44FgWwwY7_87w_EyHCm2Fz169zNyb7m54443S17M/edit#gid=0',
-				permanent: true,
+					'https://docs.google.com/spreadsheets/d/1zBl624q9s6qoyyodI9DrodUQkCox2utoIQADBToz6jU/edit#gid=0',
+				permanent: false,
 			},
 		]
 	},

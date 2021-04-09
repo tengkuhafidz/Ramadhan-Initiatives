@@ -34,6 +34,9 @@ export interface SiteData {
 	seoTitle: string
 	seoDescription: string
 	seoBannerUrl: string
+	//ANNOUNCEMENT BAR
+	announcementMessage: string
+	announcementDestinationUrl: string
 }
 
 export const defaultSiteData: SiteData = {
@@ -56,6 +59,9 @@ export const defaultSiteData: SiteData = {
 	seoTitle: 'Ramadhan Initiatives',
 	seoDescription: 'List of good initiatives for us to look into this Ramadhan',
 	seoBannerUrl: '/images/banner.png',
+	//ANNOUNCEMENT BAR
+	announcementMessage: 'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
+	announcementDestinationUrl: 'https://www.facebook.com/MUIS.SG/posts/10158740795711329'
 }
 
 export enum SheetsDimension {
@@ -67,3 +73,4 @@ export const ALL = 'All'
 
 export const SHEET_ID = process.env.SHEET_ID
 export const SHEET_KEY = process.env.SHEET_KEY
+export const HOCKEYSTACK_KEY = process.env.HOCKEYSTACK_KEY

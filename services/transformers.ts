@@ -1,9 +1,10 @@
 import {defaultSiteData, Item, SiteData} from '../utils/constants'
 
-const stringToBoolean = (field: string) => field === 'TRUE'
-const stringToArray = (field: string) =>
-	field?.split(',').map(field => field.trim())
-export const toLowercase = (field: string) => field?.toLowerCase()
+export const toLowercase = (value: string) => value?.toLowerCase()
+const stringToBoolean = (value: string) => value === 'TRUE'
+const stringToArray = (value: string) =>
+	value?.split(',').map(value => value.trim())
+const defaultToNull = (value: string) => (value ? value : null)
 
 export const transformItemsData = (itemValues: any[]): Item[] => {
 	return itemValues.map((itemValue, index) => ({
@@ -21,19 +22,22 @@ export const transformItemsData = (itemValues: any[]): Item[] => {
 export const transformSiteData = (siteDataValue: any[]): SiteData => ({
 	// NAVBAR
 	logoUrl: siteDataValue[1] || defaultSiteData.logoUrl,
-	navButtonText: siteDataValue[2],
-	navButtonUrl: siteDataValue[3],
-	navMenuText: siteDataValue[4],
-	navMenuUrl: siteDataValue[5],
+	navButtonText: defaultToNull(siteDataValue[2]),
+	navButtonUrl: defaultToNull(siteDataValue[3]),
+	navMenuText: defaultToNull(siteDataValue[4]),
+	navMenuUrl: defaultToNull(siteDataValue[5]),
 	//HERO
-	heroTitle: siteDataValue[7],
-	heroDescription: siteDataValue[8],
+	heroTitle: defaultToNull(siteDataValue[7]),
+	heroDescription: defaultToNull(siteDataValue[8]),
 	//FOOTER
-	footerText: siteDataValue[10],
-	footerLinkableText: siteDataValue[11],
-	footerLinkableUrl: siteDataValue[12],
+	footerText: defaultToNull(siteDataValue[10]),
+	footerLinkableText: defaultToNull(siteDataValue[11]),
+	footerLinkableUrl: defaultToNull(siteDataValue[12]),
 	//SEO
 	seoTitle: siteDataValue[14] || defaultSiteData.seoTitle,
 	seoDescription: siteDataValue[15] || defaultSiteData.seoDescription,
 	seoBannerUrl: siteDataValue[16] || defaultSiteData.seoBannerUrl,
+	//ANNOUNCEMENT BAR
+	announcementMessage: defaultToNull(siteDataValue[18]),
+	announcementDestinationUrl: defaultToNull(siteDataValue[19]),
 })
