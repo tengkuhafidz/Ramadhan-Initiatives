@@ -1,5 +1,5 @@
 import {useContext} from 'react'
-import SiteDataContext from '../../../utils/SiteDataContext'
+import SiteDataContext from '../../utils/SiteDataContext'
 
 export default function Hero() {
 	const {heroTitle, heroDescription} = useContext(SiteDataContext)
