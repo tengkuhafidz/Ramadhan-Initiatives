@@ -54,14 +54,16 @@ export const defaultSiteData: SiteData = {
 	//FOOTER
 	footerText: 'This is an initiative is by',
 	footerLinkableText: 'Websheets',
-	footerLinkableUrl: 'https://websheets.pro',
+	footerLinkableUrl: 'https://websheets.co',
 	//SEO
 	seoTitle: 'Ramadhan Initiatives',
 	seoDescription: 'List of good initiatives for us to look into this Ramadhan',
 	seoBannerUrl: '/images/banner.png',
 	//ANNOUNCEMENT BAR
-	announcementMessage: 'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
-	announcementDestinationUrl: 'https://www.facebook.com/MUIS.SG/posts/10158740795711329'
+	announcementMessage:
+		'Click here for Terawih prayers booking guide in Singapore 🇸🇬',
+	announcementDestinationUrl:
+		'https://www.facebook.com/MUIS.SG/posts/10158740795711329',
 }
 
 export enum SheetsDimension {

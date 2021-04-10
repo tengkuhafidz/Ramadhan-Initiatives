@@ -13,7 +13,10 @@ export default function SEO() {
 			<meta name="description" content={seoDescription} />
 
 			{/* Facebook Meta Tags */}
-			<meta property="og:url" content="https://ramadhaninitiatives.websheets.pro/" />
+			<meta
+				property="og:url"
+				content="https://ramadhaninitiatives.websheets.co/"
+			/>
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={fullSeoTitle} />
 			<meta property="og:description" content={seoDescription} />
@@ -21,10 +24,13 @@ export default function SEO() {
 
 			{/* Twitter Meta Tags */}
 			<meta name="twitter:card" content="summary_large_image" />
-			<meta property="twitter:domain" content="ramadhaninitiatives.websheets.pro" />
+			<meta
+				property="twitter:domain"
+				content="ramadhaninitiatives.websheets.co"
+			/>
 			<meta
 				property="twitter:url"
-				content="https://ramadhaninitiatives.websheets.pro/"
+				content="https://ramadhaninitiatives.websheets.co/"
 			/>
 			<meta name="twitter:title" content={fullSeoTitle} />
 			<meta name="twitter:description" content={seoDescription} />
