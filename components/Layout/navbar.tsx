@@ -17,7 +17,6 @@ export default function Navbar() {
 					<img
 						src={logoUrl}
 						alt="logo"
-						width={40}
 						height={40}
 						className="inline-block"
 					/>
