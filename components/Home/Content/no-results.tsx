@@ -5,6 +5,7 @@ interface Props {
 	selectedTypeFilter: string
 	selectedTagsFilter: string
 }
+
 export default function NoResults({
 	searchTerm,
 	selectedTypeFilter,
