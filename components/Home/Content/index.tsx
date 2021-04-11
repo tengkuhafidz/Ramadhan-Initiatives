@@ -14,7 +14,7 @@ interface Props {
 export default function Content({items}: Props) {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedTypeFilter, setSelectedTypeFilter] = useState(ALL)
-	const [selectedTagsFilter, selectedTagsFiltersFilter] = useState(ALL)
+	const [selectedTagsFilter, setSelectedTagsFilter] = useState(ALL)
 	const [favouriteIds, setFavouriteIds] = useState([])
 
 	useEffect(() => {
@@ -78,12 +78,12 @@ export default function Content({items}: Props) {
 				<Searchbar
 					searchTerm={searchTerm}
 					setSearchTerm={setSearchTerm}
-					selectedTagsFiltersFilter={selectedTagsFiltersFilter}
+					setSelectedTagsFilter={setSelectedTagsFilter}
 				/>
 				<FilterSection
 					items={searchResults}
 					selectedTag={selectedTagsFilter}
-					setSelectedTag={selectedTagsFiltersFilter}
+					setSelectedTag={setSelectedTagsFilter}
 					selectedType={selectedTypeFilter}
 					setSelectedType={setSelectedTypeFilter}
 					favouriteIds={favouriteIds}

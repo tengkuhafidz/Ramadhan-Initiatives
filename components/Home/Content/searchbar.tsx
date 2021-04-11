@@ -3,17 +3,17 @@ import {ALL} from '../../../utils/constants'
 interface Props {
 	searchTerm: string
 	setSearchTerm: React.Dispatch<React.SetStateAction<string>>
-	selectedTagsFiltersFilter: React.Dispatch<React.SetStateAction<string>>
+	setSelectedTagsFilter: React.Dispatch<React.SetStateAction<string>>
 }
 
 export default function Searchbar({
 	searchTerm,
 	setSearchTerm,
-	selectedTagsFiltersFilter,
+	setSelectedTagsFilter,
 }: Props) {
 	const setSearchTermAndResetFieldFitler = (searchTerm: string) => {
 		setSearchTerm(searchTerm)
-		selectedTagsFiltersFilter(ALL)
+		setSelectedTagsFilter(ALL)
 	}
 
 	const renderClearButton = () => {
