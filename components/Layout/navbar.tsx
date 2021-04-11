@@ -14,18 +14,20 @@ export default function Navbar() {
 		<div className="flex mt-2">
 			<div className="flex-grow">
 				<div>
-					<img
-						src={logoUrl}
-						alt="logo"
-						height={40}
-						className="inline-block"
-					/>
+					<a href="https://kuliah.sg">
+						<img
+							src={logoUrl}
+							alt="logo"
+							height={40}
+							className="inline-block"
+						/>
+					</a>
 				</div>
 			</div>
 			<div>
 				<a
 					href={navMenuUrl}
-					className="text-gray-600 dark:text-gray-400 hover:underline"
+					className="text-gray-600 hover:underline"
 					target="_blank"
 				>
 					{navMenuText}
