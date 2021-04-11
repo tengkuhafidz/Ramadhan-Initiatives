@@ -13,7 +13,7 @@ interface Props {
 
 export default function Content({items}: Props) {
 	const [searchTerm, setSearchTerm] = useState('')
-	const [selectedTypeFilter, selectedTagFilter] = useState(ALL)
+	const [selectedTypeFilter, setSelectedTypeFilter] = useState(ALL)
 	const [selectedTagsFilter, selectedTagsFiltersFilter] = useState(ALL)
 	const [favouriteIds, setFavouriteIds] = useState([])
 
@@ -85,7 +85,7 @@ export default function Content({items}: Props) {
 					selectedTag={selectedTagsFilter}
 					setSelectedTag={selectedTagsFiltersFilter}
 					selectedType={selectedTypeFilter}
-					setSelectedType={selectedTagFilter}
+					setSelectedType={setSelectedTypeFilter}
 					favouriteIds={favouriteIds}
 				/>
 			</div>
