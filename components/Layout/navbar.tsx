@@ -14,7 +14,7 @@ export default function Navbar() {
 		<div className="flex mt-2">
 			<div className="flex-grow">
 				<div>
-					<a href="https://kuliah.sg">
+					<a href="https://kuliah.sg" target="_blank">
 						<img
 							src={logoUrl}
 							alt="logo"
