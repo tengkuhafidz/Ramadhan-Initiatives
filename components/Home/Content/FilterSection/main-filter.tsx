@@ -18,6 +18,7 @@ export default function MainFilter({
 		InitiativeType.Donation,
 		InitiativeType.Participation,
 		InitiativeType.Resource,
+		InitiativeType.Talk
 	]
 
 	const setSelectedTypeAndResetSelectedTag = (type: string) => {

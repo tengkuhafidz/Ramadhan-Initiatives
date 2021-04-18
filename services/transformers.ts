@@ -7,16 +7,18 @@ const stringToArray = (value: string) =>
 const defaultToNull = (value: string) => (value ? value : null)
 
 export const transformItemsData = (itemValues: any[]): Item[] => {
-	return itemValues.map((itemValue, index) => ({
-		id: index,
-		title: itemValue[0],
-		organisation: itemValue[1],
-		type: itemValue[2],
-		tags: stringToArray(itemValue[3]),
-		posterUrl: itemValue[4],
-		initiativeUrl: itemValue[5],
-		isActive: stringToBoolean(itemValue[6]),
-	}))
+	return itemValues
+		.map((itemValue, index) => ({
+			id: index,
+			title: itemValue[0],
+			organisation: itemValue[1],
+			type: itemValue[2],
+			tags: stringToArray(itemValue[3]),
+			posterUrl: itemValue[4],
+			initiativeUrl: itemValue[5],
+			isActive: stringToBoolean(itemValue[6]),
+		}))
+		.reverse()
 }
 
 export const transformSiteData = (siteDataValue: any[]): SiteData => ({

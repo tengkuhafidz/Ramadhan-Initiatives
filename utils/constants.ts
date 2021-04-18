@@ -3,6 +3,7 @@ export enum InitiativeType {
 	Donation = '🎁 Donation',
 	Participation = '✊ Participation',
 	Resource = '🗂️ Resource',
+	Talk = '📺 Talk',
 }
 
 export interface Item {
